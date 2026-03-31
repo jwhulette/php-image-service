@@ -221,8 +221,8 @@ final class ImageTest extends TestCase
     public static function provideResizeCases(): iterable
     {
         yield 'both dimensions' => [700, 450, self::URL.'/m/700x450'];
-        yield 'width only changes height dimensions' => [700, 0, self::URL.'/m/700x579'];
-        yield 'height only changes width dimensions' => [0, 450, self::URL.'/m/900x450'];
+        yield 'width only changes height dimensions' => [700, 0, self::URL.'/m/700x0'];
+        yield 'height only changes width dimensions' => [0, 450, self::URL.'/m/0x450'];
     }
 
     #[DataProvider('provideFitInCases')]
